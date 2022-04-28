@@ -1,0 +1,29 @@
+{
+  "name": "mandi-price-tracker",
+  "version": "1.0.0",
+  "description": "A dummy Node.js backend application that returns an aggregated report on the current pricing of a market commodity.",
+  "main": "index.js",
+  "scripts": {
+    "start" : "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rangshuman/mandi_price_tracker.git"
+  },
+  "author": "Angshuman Roy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rangshuman/mandi_price_tracker/issues"
+  },
+  "homepage": "https://github.com/rangshuman/mandi_price_tracker#readme",
+  "devDependencies": {
+    "dotenv": "^16.0.0",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.0",
+    "mongoose": "^6.3.1"
+  },
+  "type": "module"
+}
