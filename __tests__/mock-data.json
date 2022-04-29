@@ -1,0 +1,13 @@
+{
+  "reportDetails": {
+      "userID": "user-3",
+      "marketID": "market-1",
+      "marketName": "Vashi Navi Mumbai",
+      "cmdtyID": "cmdty-1",
+      "marketType": "Mandi",
+      "cmdtyName": "Potato",
+      "priceUnit": "Kilo",
+      "convFctr": 1,
+      "price": 16
+  }
+}

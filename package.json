@@ -4,7 +4,8 @@
   "description": "A dummy Node.js backend application that returns an aggregated report on the current pricing of a market commodity.",
   "main": "index.js",
   "scripts": {
-    "start" : "nodemon index.js"
+    "start": "nodemon index.js",
+    "test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --detectOpenHandles --watchAll --runInBand"
   },
   "repository": {
     "type": "git",
@@ -17,8 +18,11 @@
   },
   "homepage": "https://github.com/rangshuman/mandi_price_tracker#readme",
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "dotenv": "^16.0.0",
-    "nodemon": "^2.0.15"
+    "jest": "^28.0.3",
+    "nodemon": "^2.0.15",
+    "supertest": "^6.2.3"
   },
   "dependencies": {
     "body-parser": "^1.20.0",
