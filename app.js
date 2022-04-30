@@ -5,28 +5,15 @@ import bodyParser from "body-parser";
 // importing routes
 import reportRoutes from "./routes/reports.route.js";
 
-// importing db utils
-import ConnectDb from "./database/mongodb.connect.js";
+// starting express server
+const app = express();
 
-const CreateServer = (db) => {
-	// starting express server
-	const app = express();
+// getting data in json format --- application/json
+app.use(bodyParser.json());
 
-	// getting data in json format --- application/json
-	app.use(bodyParser.json());
+// making the server accept json data
+app.use(express.json());
 
-	// making the server accept json data
-	app.use(express.json());
+app.use(reportRoutes);
 
-	if (db) {
-		ConnectDb(db);
-	} else {
-		ConnectDb(process.env.DATABASE_NAME);
-	}
-
-	app.use(reportRoutes);
-
-	return app;
-};
-
-export default CreateServer;
+export default app;

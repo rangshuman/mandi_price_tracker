@@ -1,15 +1,15 @@
 import mongoose from "mongoose";
 
-const ConnectDb = (db) => {
+const ConnectMongoDb = () => {
 	try {
 		// connecting to the MongoDB database
-		mongoose.connect(`mongodb://localhost/${db}`, {
+		mongoose.connect(process.env.DATABASE_URL, {
 			useNewUrlParser: true,
 		});
 		const dbConnect = mongoose.connection;
 		dbConnect.on("error", (error) => console.error(error));
 		dbConnect.once("open", () =>
-			console.log(`Connected to the Database. Name: ${db}`)
+			console.log(`Connected to the Database. Name: Dev-Db`)
 		);
 	} catch (err) {
 		console.error("Error connecting to mongodb");
@@ -17,4 +17,4 @@ const ConnectDb = (db) => {
 	}
 };
 
-export default ConnectDb;
+export default ConnectMongoDb;
